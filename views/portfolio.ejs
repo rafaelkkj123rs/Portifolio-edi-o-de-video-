@@ -1,0 +1,105 @@
+<%- include('partials/header') %>
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 animate-on-scroll">
+    <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">Portfolio</h1>
+        <p class="text-gray-400 max-w-2xl mx-auto text-lg">A collection of my recent video editing projects.</p>
+    </div>
+
+    <!-- Filter/Categories (Visual only) -->
+    <div class="flex flex-wrap justify-center gap-4 mb-12 animate-on-scroll delay-100">
+        <button class="px-6 py-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors border border-white/5">All</button>
+    </div>
+
+    <!-- Portfolio Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-on-scroll delay-200">
+        <% 
+        const projects = [
+            { title: 'Edição de Vídeo', category: 'YouTube', videoId: 'ysHPZYJFDgQ' },
+            { title: 'Edição de Vídeo', category: 'YouTube', videoId: '1-NGIXcJmys' },
+            { title: 'Edição de Vídeo', category: 'YouTube', videoId: 'nNrDhKX7yPo' },
+            { title: 'Edição de Vídeo', category: 'YouTube', videoId: 'ThXYAlKEQg4' },
+            { title: 'Edição de Vídeo', category: 'YouTube', videoId: 'b0RMrkZlofY' },
+            { title: 'Edição de Vídeo', category: 'YouTube', videoId: 'EOIg_QNSiLs' }
+        ];
+        %>
+        
+        <% projects.forEach(project => { %>
+            <% if (project.videoId) { %>
+                <!-- Custom Player -->
+                <div class="custom-yt-player group relative rounded-xl overflow-hidden aspect-video bg-black border border-white/5 shadow-[0_0_15px_rgba(220,38,38,0)] hover:shadow-[0_0_25px_rgba(220,38,38,0.3)] transition-all duration-500" data-video-id="<%= project.videoId %>">
+                    <!-- YouTube Player Container -->
+                    <div class="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
+                        <div class="yt-player-container w-full h-full scale-[1.05]"></div>
+                    </div>
+                    
+                    <!-- Poster Image to hide YouTube's initial UI -->
+                    <img src="https://img.youtube.com/vi/<%= project.videoId %>/maxresdefault.jpg" alt="<%= project.title %>" class="absolute inset-0 w-full h-full object-cover z-10 transition-opacity duration-500 yt-poster pointer-events-none">
+                    
+                    <!-- Clickable Overlay to toggle play/pause -->
+                    <div class="absolute inset-0 z-20 cursor-pointer click-overlay"></div>
+                    
+                    <!-- Custom Controls Overlay -->
+                    <div class="absolute bottom-0 left-0 right-0 z-30 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col gap-2">
+                        <!-- Timeline -->
+                        <input type="range" class="w-full h-1.5 bg-gray-600 rounded-lg appearance-none cursor-pointer accent-red-500 video-timeline hover:h-2 transition-all" min="0" max="100" value="0" step="0.1">
+                        
+                        <!-- Buttons -->
+                        <div class="flex items-center justify-between text-white mt-1">
+                            <div class="flex items-center gap-4">
+                                <button class="play-pause-btn hover:text-red-500 transition-colors focus:outline-none">
+                                    <svg class="w-7 h-7 play-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                    <svg class="w-7 h-7 pause-icon hidden" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                                </button>
+                                <div class="text-sm font-mono time-display select-none">00:00 / 00:00</div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <button class="mute-btn hover:text-red-500 transition-colors focus:outline-none">
+                                    <svg class="w-6 h-6 volume-on-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                                    <svg class="w-6 h-6 volume-off-icon hidden" fill="currentColor" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+                                </button>
+                                <button class="fullscreen-btn hover:text-red-500 transition-colors focus:outline-none">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Big Play Button Overlay (Center) -->
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-30">
+                        <div class="big-play-btn bg-red-600/80 rounded-full p-4 text-white opacity-80 transition-opacity duration-300">
+                            <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+
+                    <!-- Info Overlay (Top) -->
+                    <div class="absolute top-0 left-0 right-0 bg-gradient-to-b from-black/80 to-transparent p-4 z-10 pointer-events-none">
+                        <h3 class="text-lg font-bold text-white"><%= project.title %></h3>
+                        <p class="text-red-400 text-sm font-medium"><%= project.category %></p>
+                    </div>
+                </div>
+            <% } else { %>
+                <div class="group relative rounded-xl overflow-hidden aspect-video cursor-pointer bg-gray-900 border border-white/5">
+                    <img src="https://picsum.photos/seed/<%= project.seed %>/600/338" alt="<%= project.title %>" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" referrerPolicy="no-referrer">
+                    
+                    <!-- Play Button Overlay -->
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+                        <div class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/30">
+                            <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Info Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 z-10">
+                        <h3 class="text-lg font-bold text-white"><%= project.title %></h3>
+                        <p class="text-red-400 text-sm font-medium"><%= project.category %></p>
+                    </div>
+                </div>
+            <% } %>
+        <% }) %>
+    </div>
+</div>
+
+<%- include('partials/footer') %>
