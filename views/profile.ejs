@@ -1,0 +1,55 @@
+<%- include('partials/header') %>
+
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    
+    <!-- Profile Card -->
+    <div class="brutal-card p-0 mb-12 bg-white overflow-hidden">
+        <!-- Cover Photo with black border bottom -->
+        <div class="h-64 w-full bg-neo-blue relative border-b-4 border-black" id="profile-banner">
+            <div class="absolute inset-0 bg-white" style="background-image: url('https://i.pinimg.com/1200x/87/2e/ed/872eed84abb883692b8aa78dd78f33fe.jpg'); background-size: cover; background-position: center; mix-blend-mode: multiply; opacity: 0.8;"></div>
+            <div class="absolute top-4 left-4 bg-neo-yellow border-4 border-black px-4 py-2 font-black text-2xl uppercase tracking-tighter -rotate-12 translate-x-2 translate-y-2">
+                VERIFICADO
+            </div>
+        </div>
+        
+        <div class="p-8 md:p-12">
+            <div class="flex flex-col md:flex-row items-center md:items-end -mt-32 md:-mt-40 mb-10 gap-8">
+                <!-- Avatar with thick brutalist border -->
+                <div class="w-48 h-48 border-8 border-black overflow-hidden bg-neo-green shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] transform rotate-3 relative group">
+                    <img id="profile-photo" src="https://i.pinimg.com/736x/17/87/d3/1787d3e3ebf0d9aa274e5bba64ad82f5.jpg" alt="Profile" class="w-full h-full object-cover">
+                </div>
+                
+                <div class="flex-grow text-center md:text-left bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] -rotate-1">
+                    <h1 id="profile-name" class="text-5xl md:text-7xl font-black uppercase tracking-tighter">STOCK</h1>
+                    <p class="text-neo-pink font-black text-2xl uppercase italic" id="profile-role">Video Editor & Motion Designer</p>
+                </div>
+            </div>
+
+            <!-- About Section in a Card -->
+            <div class="bg-neo-yellow border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-12">
+                <h3 class="text-3xl font-black mb-4 uppercase">Sobre Mim</h3>
+                <p class="text-xl font-bold leading-relaxed">
+                    Apaixonado por criar experiências visuais que prendem a atenção. Com foco em edição dinâmica e motion design cartoon, transformo ideias em projetos vibrantes e memoráveis.
+                </p>
+            </div>
+
+            <!-- Contact in a Floating Card -->
+            <div class="md:w-1/2">
+                <div class="bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all">
+                    <h3 class="text-2xl font-black mb-4 uppercase flex items-center gap-3">
+                        <span class="w-4 h-4 bg-neo-green border-2 border-black inline-block"></span>
+                        Contato
+                    </h3>
+                    <div class="flex items-center gap-4 text-xl font-black uppercase tracking-tight">
+                        <div class="w-12 h-12 bg-[#5865F2] border-4 border-black flex items-center justify-center p-2">
+                             <svg fill="white" viewBox="0 0 24 24" class="w-full h-full"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+                        </div>
+                        <span class="text-black">sla_2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer') %>
