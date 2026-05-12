@@ -4,10 +4,10 @@
   --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Syne", sans-serif;
   
-  --color-neo-yellow: #FFFF00;
-  --color-neo-green: #00FF00;
-  --color-neo-pink: #FF00FF;
-  --color-neo-blue: #2D31FA;
+  --color-neo-yellow: #F2ECDD;
+  --color-neo-green: #333533;
+  --color-neo-pink: #0B0B0B;
+  --color-neo-blue: #333533;
 }
 
 @layer base {
