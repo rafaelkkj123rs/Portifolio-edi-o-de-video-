@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #f5f3ec;
+    color: #111111;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+}
+
+/* Custom Folder Tab Style */
+.folder-tab {
+  position: relative;
+}
+
+.folder-tab::before {
+  content: '';
+  position: absolute;
+  top: -24px;
+  left: 0;
+  width: 140px;
+  height: 24px;
+  background-color: inherit;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f3ec;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #111111;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0052ff;
+}
