@@ -1,6 +1,6 @@
 import React from 'react';
 import { Category } from '../types';
-import { Film, Smartphone, Sparkles, Grid, Image as ImageIcon } from 'lucide-react';
+import { Film, Smartphone, Sparkles, Grid, Image as ImageIcon, Palette } from 'lucide-react';
 
 interface FilterBarProps {
   currentCategory: Category;
@@ -11,6 +11,7 @@ interface FilterBarProps {
     videos: number;
     shorts: number;
     gifs: number;
+    designs: number;
   };
 }
 
@@ -49,6 +50,12 @@ export const FilterBar: React.FC<FilterBarProps> = ({
       label: 'GIFs & Motion',
       icon: <ImageIcon className="w-3.5 h-3.5" />,
       count: counts.gifs
+    },
+    {
+      id: 'designs',
+      label: 'Designs',
+      icon: <Palette className="w-3.5 h-3.5" />,
+      count: counts.designs
     }
   ];
 

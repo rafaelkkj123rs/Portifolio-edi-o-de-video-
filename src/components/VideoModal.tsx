@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { VideoProject } from '../types';
-import { X, ChevronLeft, ChevronRight, Copy, Check, ExternalLink, Film, Smartphone, Sparkles, Image as ImageIcon } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, Copy, Check, ExternalLink, Film, Smartphone, Sparkles, Image as ImageIcon, Palette } from 'lucide-react';
 import { getYouTubeEmbedUrl } from '../utils/youtube';
 
 interface VideoModalProps {
@@ -33,10 +33,13 @@ export const VideoModal: React.FC<VideoModalProps> = ({
   const nextVideo = allVideos[(currentIndex + 1) % allVideos.length];
 
   const isGif = video.type === 'gif';
+  const isDesign = video.type === 'design';
   const isShort = video.type === 'short';
 
-  const directUrl = isGif && video.gifUrl
-    ? video.gifUrl
+  const imageUrl = isDesign ? (video.imageUrl || video.gifUrl) : isGif ? video.gifUrl : null;
+
+  const directUrl = imageUrl
+    ? imageUrl
     : isShort
     ? `https://youtube.com/shorts/${video.youtubeId}`
     : `https://youtu.be/${video.youtubeId}`;
@@ -68,16 +71,16 @@ export const VideoModal: React.FC<VideoModalProps> = ({
           <X className="w-5 h-5" />
         </button>
 
-        {/* Video / GIF Player Side */}
-        <div className={`relative bg-[#18181B] flex items-center justify-center ${isShort ? 'lg:w-1/2 p-4' : 'lg:w-2/3 p-2 sm:p-4'}`}>
+        {/* Video / GIF / Image Player Side */}
+        <div className={`relative bg-[#18181B] flex items-center justify-center ${isShort || isDesign ? 'lg:w-1/2 p-4' : 'lg:w-2/3 p-2 sm:p-4'}`}>
           <div
             className={`w-full relative mx-auto overflow-hidden rounded-xl border-2 border-black/20 bg-black flex items-center justify-center ${
-              isShort ? 'aspect-[9/16] max-h-[70vh] max-w-[360px]' : 'aspect-video max-h-[70vh]'
+              isShort || isDesign ? 'aspect-[9/16] max-h-[70vh] max-w-[360px]' : 'aspect-video max-h-[70vh]'
             }`}
           >
-            {isGif && video.gifUrl ? (
+            {imageUrl ? (
               <img
-                src={video.gifUrl}
+                src={imageUrl}
                 alt={video.title}
                 className="w-full h-full object-contain bg-black"
               />
@@ -113,13 +116,13 @@ export const VideoModal: React.FC<VideoModalProps> = ({
         </div>
 
         {/* Details Side */}
-        <div className={`p-6 bg-white flex flex-col justify-between overflow-y-auto ${isShort ? 'lg:w-1/2' : 'lg:w-1/3'} border-t-2 lg:border-t-0 lg:border-l-2 border-[#111111]`}>
+        <div className={`p-6 bg-white flex flex-col justify-between overflow-y-auto ${isShort || isDesign ? 'lg:w-1/2' : 'lg:w-1/3'} border-t-2 lg:border-t-0 lg:border-l-2 border-[#111111]`}>
           <div className="space-y-4">
             {/* Badges Header */}
             <div className="flex flex-wrap items-center justify-between gap-2 border-b-2 border-[#111111] pb-3">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#F5F3EC] border border-black/10 text-xs font-mono font-bold text-[#111111] uppercase">
-                {isGif ? <ImageIcon className="w-3.5 h-3.5 text-[#0052FF]" /> : isShort ? <Smartphone className="w-3.5 h-3.5 text-[#0052FF]" /> : <Film className="w-3.5 h-3.5 text-[#0052FF]" />}
-                <span>{isGif ? 'GIF ANIMADO' : video.aspectRatio} • {video.category}</span>
+                {isDesign ? <Palette className="w-3.5 h-3.5 text-[#0052FF]" /> : isGif ? <ImageIcon className="w-3.5 h-3.5 text-[#0052FF]" /> : isShort ? <Smartphone className="w-3.5 h-3.5 text-[#0052FF]" /> : <Film className="w-3.5 h-3.5 text-[#0052FF]" />}
+                <span>{isDesign ? 'DESIGN GRÁFICO' : isGif ? 'GIF ANIMADO' : video.aspectRatio} • {video.category}</span>
               </span>
 
               {video.featured && (
@@ -198,7 +201,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({
               className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-[#18181B] text-white font-mono text-xs font-bold uppercase rounded-xl hover:bg-[#0052FF] transition-colors border-2 border-[#111111]"
             >
               <ExternalLink className="w-4 h-4" />
-              <span>{isGif ? 'ABRIR GIF' : 'YOUTUBE'}</span>
+              <span>{isDesign ? 'ABRIR ARTE' : isGif ? 'ABRIR GIF' : 'YOUTUBE'}</span>
             </a>
           </div>
         </div>

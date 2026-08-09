@@ -34,7 +34,8 @@ export const VideoGrid: React.FC<VideoGridProps> = ({
     destaques: videos.filter((v) => v.featured).length,
     videos: videos.filter((v) => v.type === 'video').length,
     shorts: videos.filter((v) => v.type === 'short').length,
-    gifs: videos.filter((v) => v.type === 'gif').length
+    gifs: videos.filter((v) => v.type === 'gif').length,
+    designs: videos.filter((v) => v.type === 'design').length
   };
 
   // Filtered list
@@ -43,6 +44,7 @@ export const VideoGrid: React.FC<VideoGridProps> = ({
     if (currentCategory === 'videos') return video.type === 'video';
     if (currentCategory === 'shorts') return video.type === 'short';
     if (currentCategory === 'gifs') return video.type === 'gif';
+    if (currentCategory === 'designs') return video.type === 'design';
     return true;
   });
 

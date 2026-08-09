@@ -1,11 +1,12 @@
-export type VideoType = 'video' | 'short' | 'gif';
+export type VideoType = 'video' | 'short' | 'gif' | 'design';
 
-export type Category = 'todos' | 'destaques' | 'videos' | 'shorts' | 'gifs';
+export type Category = 'todos' | 'destaques' | 'videos' | 'shorts' | 'gifs' | 'designs';
 
 export interface VideoProject {
   id: string;
   youtubeId?: string;
   gifUrl?: string;
+  imageUrl?: string;
   title: string;
   clientOrProject: string;
   type: VideoType;
