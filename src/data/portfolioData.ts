@@ -75,7 +75,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
   },
   {
     id: 'gif-1',
-    gifUrl: 'https://ibb.co/PvBSnBgq',
+    gifUrl: 'https://i.ibb.co/G4ghLgRz/SRoxo-Kage-Store.gif',
     title: 'KageStore • Motion Banner GIF',
     clientOrProject: 'KageStore',
     type: 'gif',
