@@ -75,7 +75,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
   },
   {
     id: 'gif-1',
-    gifUrl: 'https://cdn.discordapp.com/attachments/1252592679611797595/1535529385380155402/KageStore.gif?ex=6a7818ae&is=6a76c72e&hm=0946551513f5dbeb42fef8261489b6f4ae4ca1e2bcee14672da50ad58c322b9b&',
+    gifUrl: 'https://ibb.co/PvBSnBgq',
     title: 'KageStore • Motion Banner GIF',
     clientOrProject: 'KageStore',
     type: 'gif',
