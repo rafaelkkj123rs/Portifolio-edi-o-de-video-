@@ -35,12 +35,13 @@ export const VideoModal: React.FC<VideoModalProps> = ({
   const isGif = video.type === 'gif';
   const isDesign = video.type === 'design';
   const isShort = video.type === 'short';
+  const isVertical = isShort || isDesign || video.aspectRatio === '9:16';
 
-  const imageUrl = isDesign ? (video.imageUrl || video.gifUrl) : isGif ? video.gifUrl : null;
+  const imageUrl = isDesign ? (video.imageUrl || video.gifUrl) : isGif && video.gifUrl ? video.gifUrl : null;
 
   const directUrl = imageUrl
     ? imageUrl
-    : isShort
+    : isShort || video.aspectRatio === '9:16'
     ? `https://youtube.com/shorts/${video.youtubeId}`
     : `https://youtu.be/${video.youtubeId}`;
 
@@ -72,10 +73,10 @@ export const VideoModal: React.FC<VideoModalProps> = ({
         </button>
 
         {/* Video / GIF / Image Player Side */}
-        <div className={`relative bg-[#18181B] flex items-center justify-center ${isShort || isDesign ? 'lg:w-1/2 p-4' : 'lg:w-2/3 p-2 sm:p-4'}`}>
+        <div className={`relative bg-[#18181B] flex items-center justify-center ${isVertical ? 'lg:w-1/2 p-4' : 'lg:w-2/3 p-2 sm:p-4'}`}>
           <div
             className={`w-full relative mx-auto overflow-hidden rounded-xl border-2 border-black/20 bg-black flex items-center justify-center ${
-              isShort || isDesign ? 'aspect-[9/16] max-h-[70vh] max-w-[360px]' : 'aspect-video max-h-[70vh]'
+              isVertical ? 'aspect-[9/16] max-h-[70vh] max-w-[360px]' : 'aspect-video max-h-[70vh]'
             }`}
           >
             {imageUrl ? (
@@ -116,13 +117,13 @@ export const VideoModal: React.FC<VideoModalProps> = ({
         </div>
 
         {/* Details Side */}
-        <div className={`p-6 bg-white flex flex-col justify-between overflow-y-auto ${isShort || isDesign ? 'lg:w-1/2' : 'lg:w-1/3'} border-t-2 lg:border-t-0 lg:border-l-2 border-[#111111]`}>
+        <div className={`p-6 bg-white flex flex-col justify-between overflow-y-auto ${isVertical ? 'lg:w-1/2' : 'lg:w-1/3'} border-t-2 lg:border-t-0 lg:border-l-2 border-[#111111]`}>
           <div className="space-y-4">
             {/* Badges Header */}
             <div className="flex flex-wrap items-center justify-between gap-2 border-b-2 border-[#111111] pb-3">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#F5F3EC] border border-black/10 text-xs font-mono font-bold text-[#111111] uppercase">
-                {isDesign ? <Palette className="w-3.5 h-3.5 text-[#0052FF]" /> : isGif ? <ImageIcon className="w-3.5 h-3.5 text-[#0052FF]" /> : isShort ? <Smartphone className="w-3.5 h-3.5 text-[#0052FF]" /> : <Film className="w-3.5 h-3.5 text-[#0052FF]" />}
-                <span>{isDesign ? 'DESIGN GRÁFICO' : isGif ? 'GIF ANIMADO' : video.aspectRatio} • {video.category}</span>
+                {isDesign ? <Palette className="w-3.5 h-3.5 text-[#0052FF]" /> : isGif && !video.youtubeId ? <ImageIcon className="w-3.5 h-3.5 text-[#0052FF]" /> : isVertical ? <Smartphone className="w-3.5 h-3.5 text-[#0052FF]" /> : <Film className="w-3.5 h-3.5 text-[#0052FF]" />}
+                <span>{isDesign ? 'DESIGN GRÁFICO' : isGif && video.gifUrl ? 'GIF ANIMADO' : video.aspectRatio === '9:16' ? '9:16 • MOTION' : video.aspectRatio} • {video.category}</span>
               </span>
 
               {video.featured && (

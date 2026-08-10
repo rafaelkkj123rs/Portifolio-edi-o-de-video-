@@ -13,6 +13,7 @@ export const VideoCard: React.FC<VideoCardProps> = ({ video, onSelect }) => {
   const isShort = video.type === 'short';
   const isGif = video.type === 'gif';
   const isDesign = video.type === 'design';
+  const isVertical = isShort || isDesign || video.aspectRatio === '9:16';
 
   const thumbnailUrl = isDesign && video.imageUrl
     ? video.imageUrl
@@ -26,7 +27,7 @@ export const VideoCard: React.FC<VideoCardProps> = ({ video, onSelect }) => {
     ? video.imageUrl
     : isGif && video.gifUrl
     ? video.gifUrl
-    : isShort
+    : isShort || video.youtubeId
     ? `https://youtube.com/shorts/${video.youtubeId}`
     : `https://youtu.be/${video.youtubeId}`;
 
@@ -34,25 +35,25 @@ export const VideoCard: React.FC<VideoCardProps> = ({ video, onSelect }) => {
     <div
       id={`video-card-${video.id}`}
       className={`group relative bg-white border-2 border-[#111111] rounded-2xl overflow-hidden shadow-[4px_4px_0px_0px_#111111] hover:shadow-[6px_6px_0px_0px_#0052FF] transition-all duration-300 flex flex-col justify-between ${
-        isShort || isDesign ? 'col-span-1' : 'col-span-1 sm:col-span-2'
+        isVertical ? 'col-span-1' : 'col-span-1 sm:col-span-2'
       }`}
     >
       {/* Editorial Folder Tab Header */}
       <div className="bg-[#18181B] text-white px-3.5 py-2 flex items-center justify-between border-b-2 border-[#111111]">
         <span className="flex items-center gap-1.5 font-mono text-[11px] font-bold uppercase tracking-wider text-zinc-200">
-          {isDesign ? <Palette className="w-3.5 h-3.5 text-[#0052FF]" /> : isGif ? <ImageIcon className="w-3.5 h-3.5 text-[#0052FF]" /> : isShort ? <Smartphone className="w-3.5 h-3.5 text-[#0052FF]" /> : <Film className="w-3.5 h-3.5 text-[#0052FF]" />}
+          {isDesign ? <Palette className="w-3.5 h-3.5 text-[#0052FF]" /> : isGif && !video.youtubeId ? <ImageIcon className="w-3.5 h-3.5 text-[#0052FF]" /> : isVertical ? <Smartphone className="w-3.5 h-3.5 text-[#0052FF]" /> : <Film className="w-3.5 h-3.5 text-[#0052FF]" />}
           <span>{video.clientOrProject}</span>
         </span>
 
         <span className="font-mono text-[10px] px-2 py-0.5 rounded bg-[#0052FF] text-white font-bold uppercase">
-          {isDesign ? 'DESIGN' : isGif ? 'GIF ANIMADO' : video.aspectRatio}
+          {isDesign ? 'DESIGN' : isGif && video.gifUrl ? 'GIF ANIMADO' : video.aspectRatio === '9:16' ? '9:16 • MOTION' : video.aspectRatio}
         </span>
       </div>
 
       {/* Top Media Container */}
       <div
         className={`relative w-full overflow-hidden bg-black cursor-pointer ${
-          isShort || isDesign ? 'aspect-[9/16]' : 'aspect-video'
+          isVertical ? 'aspect-[9/16]' : 'aspect-video'
         }`}
         onClick={() => onSelect(video)}
       >
