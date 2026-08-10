@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { VideoProject } from '../types';
 import { X, ChevronLeft, ChevronRight, Copy, Check, ExternalLink, Film, Smartphone, Sparkles, Image as ImageIcon, Palette } from 'lucide-react';
-import { getYouTubeEmbedUrl } from '../utils/youtube';
+import { getYouTubeEmbedUrl, formatImageOrGifUrl } from '../utils/youtube';
 
 interface VideoModalProps {
   video: VideoProject | null;
@@ -37,7 +37,8 @@ export const VideoModal: React.FC<VideoModalProps> = ({
   const isShort = video.type === 'short';
   const isVertical = isShort || isDesign || video.aspectRatio === '9:16';
 
-  const imageUrl = isDesign ? (video.imageUrl || video.gifUrl) : isGif && video.gifUrl ? video.gifUrl : null;
+  const rawUrl = isDesign ? (video.imageUrl || video.gifUrl) : isGif && video.gifUrl ? video.gifUrl : null;
+  const imageUrl = formatImageOrGifUrl(rawUrl || undefined);
 
   const directUrl = imageUrl
     ? imageUrl
@@ -83,6 +84,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({
               <img
                 src={imageUrl}
                 alt={video.title}
+                referrerPolicy="no-referrer"
                 className="w-full h-full object-contain bg-black"
               />
             ) : (

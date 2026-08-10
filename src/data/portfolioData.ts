@@ -76,10 +76,10 @@ export const INITIAL_VIDEOS: VideoProject[] = [
   {
     id: 'gif-1',
     gifUrl: 'https://i.ibb.co/G4ghLgRz/SRoxo-Kage-Store.gif',
-    title: 'KageStore • Motion Banner GIF',
+    title: 'SRoxo Kage Store • Motion Banner GIF',
     clientOrProject: 'KageStore',
     type: 'gif',
-    category: 'GIFs & Animações',
+    category: 'GIFs & Motion',
     featured: true,
     duration: 'GIF Animado Loop',
     viewsCount: 'Motion Graphic',
@@ -87,7 +87,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     resolution: 'Full HD Animated',
     fps: '60 FPS',
     software: ['After Effects', 'Photoshop'],
-    description: 'Animação e Motion Graphics em GIF desenvolvida no After Effects e exportada para KageStore.',
+    description: 'Animação e Motion Graphics em GIF desenvolvida para SRoxo Kage Store.',
     tags: ['GIF Animado', 'After Effects', 'Photoshop', 'KageStore'],
     date: '2024'
   },

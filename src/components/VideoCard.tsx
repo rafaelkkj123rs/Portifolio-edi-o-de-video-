@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { VideoProject } from '../types';
 import { Play, ExternalLink, Sparkles, Smartphone, Film, Image as ImageIcon, Palette } from 'lucide-react';
-import { getYouTubeThumbnail } from '../utils/youtube';
+import { getYouTubeThumbnail, formatImageOrGifUrl } from '../utils/youtube';
 
 interface VideoCardProps {
   video: VideoProject;
@@ -15,18 +15,21 @@ export const VideoCard: React.FC<VideoCardProps> = ({ video, onSelect }) => {
   const isDesign = video.type === 'design';
   const isVertical = isShort || isDesign || video.aspectRatio === '9:16';
 
-  const thumbnailUrl = isDesign && video.imageUrl
-    ? video.imageUrl
-    : isGif && video.gifUrl
-    ? video.gifUrl
+  const formattedImage = isDesign ? formatImageOrGifUrl(video.imageUrl) : null;
+  const formattedGif = isGif ? formatImageOrGifUrl(video.gifUrl) : null;
+
+  const thumbnailUrl = formattedImage
+    ? formattedImage
+    : formattedGif
+    ? formattedGif
     : imgError || !video.youtubeId
     ? 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1200&q=80'
     : getYouTubeThumbnail(video.youtubeId, 'maxres');
 
-  const youtubeDirectUrl = isDesign && video.imageUrl
-    ? video.imageUrl
-    : isGif && video.gifUrl
-    ? video.gifUrl
+  const youtubeDirectUrl = formattedImage
+    ? formattedImage
+    : formattedGif
+    ? formattedGif
     : isShort || video.youtubeId
     ? `https://youtube.com/shorts/${video.youtubeId}`
     : `https://youtu.be/${video.youtubeId}`;
@@ -61,6 +64,7 @@ export const VideoCard: React.FC<VideoCardProps> = ({ video, onSelect }) => {
           src={thumbnailUrl}
           alt={video.title}
           onError={() => setImgError(true)}
+          referrerPolicy="no-referrer"
           className="w-full h-full object-contain bg-[#111111] group-hover:scale-105 transition-transform duration-500 opacity-95 group-hover:opacity-100"
           loading="lazy"
         />
