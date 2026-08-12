@@ -145,7 +145,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     tags: ['Design', 'Y2K', 'Cyber', 'Photoshop'],
     date: '2024'
   },
-    {
+  {
     id: 'design-4',
     imageUrl: 'https://media.discordapp.net/attachments/1252592679611797595/1536830231350870079/desing_nokia_y2k.png?ex=6a7d7cf0&is=6a7c2b70&hm=9684ae5e2aec471d4e003580d116750317c3e98580ffc2a1fed63a7ce1b27724&=&format=webp&quality=lossless&width=725&height=1024',
     title: 'Design Y2K Nokia',
@@ -163,7 +163,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     tags: ['Design', 'Y2K', 'Cyber', 'Photoshop'],
     date: '2026'
   },
-      {
+  {
     id: 'design-5',
     imageUrl: 'https://media.discordapp.net/attachments/1252592679611797595/1536830229589528726/desing_post_car.png?ex=6a7d7cef&is=6a7c2b6f&hm=e927105c1b82aa20d52e8227c26897b8f9587f8c5ecf2ffce4b6064029dcb362&=&format=webp&quality=lossless&width=725&height=1024',
     title: 'Design Car',
@@ -181,7 +181,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     tags: ['Design', 'discord', 'Cyber', 'Logo', 'Photoshop'],
     date: '2026'
   },
-        {
+  {
     id: 'design-6',
     imageUrl: 'https://media.discordapp.net/attachments/1252592679611797595/1536830227706281994/post_astronauta.png?ex=6a7d7cef&is=6a7c2b6f&hm=45fff0f57ccc96f312067659d1b62ef06352a95557242a7d8def227781969edc&=&format=webp&quality=lossless&width=725&height=1024',
     title: 'Design Capa de filme',
@@ -199,7 +199,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     tags: ['Design', 'Capa', 'Cyber', 'Photoshop'],
     date: '2024'
   },
-          {
+  {
     id: 'design-7',
     imageUrl: 'https://media.discordapp.net/attachments/1252592679611797595/1536830225956999198/Logo_GHOST.png?ex=6a7d7cee&is=6a7c2b6e&hm=6145c856e0fb55ef9038590445f92698ada35972cb3e5035e556b367dc32e04e&=&format=webp&quality=lossless',
     title: 'Design Logo loja discord',
@@ -217,7 +217,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     tags: ['Design', 'Y2K', 'Cyber', 'Photoshop'],
     date: '2024'
   },
-            {
+  {
     id: 'design-8',
     imageUrl: 'https://media.discordapp.net/attachments/1252592679611797595/1536830225105686758/desing_banner_stock.png?ex=6a7d7cee&is=6a7c2b6e&hm=8d64b21fee62fd3c83b82a15ccf66b7494e67ee9b19efd88a987781df9bc5c4a&=&format=webp&quality=lossless&width=1536&height=864',
     title: 'Design Banner/thumbnail',
