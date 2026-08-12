@@ -145,6 +145,24 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     tags: ['Design', 'Y2K', 'Cyber', 'Photoshop'],
     date: '2024'
   },
+    {
+    id: 'design-4',
+    imageUrl: 'https://media.discordapp.net/attachments/1252592679611797595/1536830231350870079/desing_nokia_y2k.png?ex=6a7d7cf0&is=6a7c2b70&hm=9684ae5e2aec471d4e003580d116750317c3e98580ffc2a1fed63a7ce1b27724&=&format=webp&quality=lossless&width=725&height=1024',
+    title: 'Design Y2K Nokia',
+    clientOrProject: 'Design Gráfico',
+    type: 'design',
+    category: 'Designs',
+    featured: true,
+    duration: 'Design Estático',
+    viewsCount: 'Arte Gráfica',
+    aspectRatio: '9:16',
+    resolution: 'Alta Resolução',
+    fps: 'Estático',
+    software: ['Photoshop', 'Illustrator'],
+    description: 'Criação gráfica em estilo Y2K explorando estética cibernética dos anos 2000, interfaces retro PC e elementos futuristas.',
+    tags: ['Design', 'Y2K', 'Cyber', 'Photoshop'],
+    date: '2024'
+  },
   {
     id: '5',
     youtubeId: 'ay3Mkyh_A_0',
