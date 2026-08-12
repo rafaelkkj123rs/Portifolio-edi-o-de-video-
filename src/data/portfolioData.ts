@@ -163,6 +163,24 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     tags: ['Design', 'Y2K', 'Cyber', 'Photoshop'],
     date: '2024'
   },
+      {
+    id: 'design-5',
+    imageUrl: 'https://media.discordapp.net/attachments/1252592679611797595/1536830229589528726/desing_post_car.png?ex=6a7d7cef&is=6a7c2b6f&hm=e927105c1b82aa20d52e8227c26897b8f9587f8c5ecf2ffce4b6064029dcb362&=&format=webp&quality=lossless&width=725&height=1024',
+    title: 'Design Car',
+    clientOrProject: 'Design Gráfico',
+    type: 'design',
+    category: 'Designs',
+    featured: true,
+    duration: 'Design Estático',
+    viewsCount: 'Arte Gráfica',
+    aspectRatio: '9:16',
+    resolution: 'Alta Resolução',
+    fps: 'Estático',
+    software: ['Photoshop', 'Illustrator'],
+    description: 'Criação gráfica em estilo Y2K explorando estética cibernética dos anos 2000, interfaces retro PC e elementos futuristas.',
+    tags: ['Design', 'Y2K', 'Cyber', 'Photoshop'],
+    date: '2024'
+  },
   {
     id: '5',
     youtubeId: 'ay3Mkyh_A_0',
