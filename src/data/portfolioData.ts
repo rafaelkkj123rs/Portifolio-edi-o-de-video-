@@ -104,7 +104,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     aspectRatio: '9:16',
     resolution: 'Alta Resolução',
     fps: 'Estático',
-    software: ['Photoshop',],
+    software: ['Photoshop'],
     description: 'Composição de design inspirada na estética e cultura dos anos 90, com tipografia marcante e colagem visual.',
     tags: ['Design', 'Anos 90', 'Photoshop', 'Arte Gráfica'],
     date: '2026'
@@ -122,7 +122,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     aspectRatio: '9:16',
     resolution: 'Alta Resolução',
     fps: 'Estático',
-    software: ['Photoshop',],
+    software: ['Photoshop'],
     description: 'Design visual retrô elaborado com paleta de cores vintage, texturas analógicas e conceitos de branding.',
     tags: ['Design', 'Retrô', 'Photoshop', 'Branding'],
     date: '2026'
@@ -140,7 +140,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     aspectRatio: '9:16',
     resolution: 'Alta Resolução',
     fps: 'Estático',
-    software: ['Photoshop',],
+    software: ['Photoshop'],
     description: 'Criação gráfica em estilo Y2K explorando estética cibernética dos anos 2000, interfaces retro PC e elementos futuristas.',
     tags: ['Design', 'Y2K', 'Cyber', 'Photoshop'],
     date: '2026'
@@ -158,7 +158,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     aspectRatio: '9:16',
     resolution: 'Alta Resolução',
     fps: 'Estático',
-    software: ['Photoshop',],
+    software: ['Photoshop'],
     description: 'Criação gráfica em estilo Y2K explorando estética cibernética dos anos 2000, interfaces retro Nokia e elementos futuristas.',
     tags: ['Design', 'Y2K', 'Cyber', 'Photoshop'],
     date: '2026'
@@ -176,7 +176,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     aspectRatio: '9:16',
     resolution: 'Alta Resolução',
     fps: 'Estático',
-    software: ['Photoshop',],
+    software: ['Photoshop'],
     description: 'Criação gráfica.',
     tags: ['Design', 'discord', 'Cyber', 'Logo', 'Photoshop'],
     date: '2026'
@@ -212,7 +212,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     aspectRatio: '9:16',
     resolution: 'Alta Resolução',
     fps: 'Estático',
-    software: ['Photoshop',],
+    software: ['Photoshop'],
     description: 'Criação gráfica logo, para lojas no discord.',
     tags: ['Design', 'Y2K', 'Cyber', 'Photoshop'],
     date: '2026'
@@ -230,7 +230,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     aspectRatio: '9:16',
     resolution: 'Alta Resolução',
     fps: 'Estático',
-    software: ['Photoshop',],
+    software: ['Photoshop'],
     description: 'Criação gráfica.',
     tags: ['Design', 'Thumbnail', 'Photoshop'],
     date: '2026'
