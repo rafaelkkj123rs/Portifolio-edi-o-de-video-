@@ -17,7 +17,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     software: ['Adobe Premiere Pro', 'After Effects'],
     description: 'Corte cinematográfico com dinâmica acelerada, pós-produção e sound design imersivo focado em altíssima retenção de audiência.',
     tags: ['Premiere Pro', 'After Effects', 'Sound Design', 'Storytelling'],
-    date: '2024'
+    date: '2026'
   },
   {
     id: '2',
@@ -35,7 +35,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     software: ['Adobe Premiere Pro', 'Photoshop'],
     description: 'Edição contínua com pacing narrativo, efeitos visuais limpos e sincronização musical precisa para retenção máxima.',
     tags: ['Premiere Pro', 'Photoshop', 'Narrativa', 'Pacing'],
-    date: '2024'
+    date: '2026'
   },
   {
     id: '3',
@@ -53,7 +53,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     software: ['After Effects', 'Premiere Pro'],
     description: 'Edição vertical otimizada para algoritmos de alta retenção (YouTube Shorts, Reels, TikTok) com ganchos visuais e legendas animadas.',
     tags: ['After Effects', 'Premiere Pro', 'Shorts', 'Legendas Animadas'],
-    date: '2024'
+    date: '2026'
   },
   {
     id: '4',
@@ -71,7 +71,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     software: ['Premiere Pro', 'After Effects'],
     description: 'Corte rápido e efeitos sonoros acentuados projetados para captura imediata de atenção nos primeiros 3 segundos.',
     tags: ['After Effects', 'Premiere Pro', 'Ganchos', 'Motion'],
-    date: '2024'
+    date: '2026'
   },
   {
     id: 'gif-1',
@@ -89,7 +89,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     software: ['After Effects', 'Photoshop'],
     description: 'Animação e Motion Graphics em GIF desenvolvida para SRoxo Kage Store.',
     tags: ['GIF Animado', 'After Effects', 'Photoshop', 'KageStore'],
-    date: '2024'
+    date: '2026'
   },
   {
     id: 'design-1',
@@ -107,7 +107,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     software: ['Photoshop',],
     description: 'Composição de design inspirada na estética e cultura dos anos 90, com tipografia marcante e colagem visual.',
     tags: ['Design', 'Anos 90', 'Photoshop', 'Arte Gráfica'],
-    date: '2024'
+    date: '2026'
   },
   {
     id: 'design-2',
@@ -125,7 +125,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     software: ['Photoshop',],
     description: 'Design visual retrô elaborado com paleta de cores vintage, texturas analógicas e conceitos de branding.',
     tags: ['Design', 'Retrô', 'Photoshop', 'Branding'],
-    date: '2024'
+    date: '2026'
   },
   {
     id: 'design-3',
@@ -143,7 +143,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     software: ['Photoshop',],
     description: 'Criação gráfica em estilo Y2K explorando estética cibernética dos anos 2000, interfaces retro PC e elementos futuristas.',
     tags: ['Design', 'Y2K', 'Cyber', 'Photoshop'],
-    date: '2024'
+    date: '2026'
   },
   {
     id: 'design-4',
@@ -197,7 +197,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     software: ['Photoshop'],
     description: 'Criação gráfica em estilo Capa de filme.',
     tags: ['Design', 'Capa', 'Cyber', 'Photoshop'],
-    date: '2024'
+    date: '2026'
   },
   {
     id: 'design-7',
@@ -215,7 +215,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     software: ['Photoshop',],
     description: 'Criação gráfica logo, para lojas no discord.',
     tags: ['Design', 'Y2K', 'Cyber', 'Photoshop'],
-    date: '2024'
+    date: '2026'
   },
   {
     id: 'design-8',
@@ -233,7 +233,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     software: ['Photoshop',],
     description: 'Criação gráfica.',
     tags: ['Design', 'Thumbnail', 'Photoshop'],
-    date: '2024'
+    date: '2026'
   },
   {
     id: '5',
@@ -251,7 +251,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     software: ['After Effects', 'Premiere Pro'],
     description: 'Design de áudio em camadas e elementos gráficos customizados para manter o espectador engajado do início ao fim.',
     tags: ['After Effects', 'Premiere Pro', 'Overlays', 'Reels'],
-    date: '2024'
+    date: '2026'
   },
   {
     id: '6',
@@ -269,7 +269,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     software: ['Premiere Pro', 'After Effects'],
     description: 'Sincronização impecável com a trilha sonora, recortes rápidos e animações no After Effects.',
     tags: ['Premiere Pro', 'After Effects', 'Music Sync', 'Speed Ramping'],
-    date: '2024'
+    date: '2026'
   },
   {
     id: '7',
@@ -287,7 +287,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     software: ['After Effects', 'Premiere Pro'],
     description: 'Gráficos na tela, ícones pop-up animados no After Effects e pontuação sonora contínua construindo urgência narrativa.',
     tags: ['After Effects', 'Premiere Pro', 'Pop-ups', 'Kinetic Type'],
-    date: '2024'
+    date: '2026'
   },
   {
     id: '8',
@@ -305,7 +305,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     software: ['Premiere Pro', 'After Effects'],
     description: 'Montagem rítmica acelerada no Premiere Pro com animações de texto do After Effects.',
     tags: ['Premiere Pro', 'After Effects', 'Seamless Loop', 'Clean VFX'],
-    date: '2024'
+    date: '2026'
   }
 ];
 
