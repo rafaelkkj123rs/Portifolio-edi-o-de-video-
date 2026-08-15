@@ -83,14 +83,14 @@ export const VideoModal: React.FC<VideoModalProps> = ({
             {imageUrl ? (
               <img
                 src={imageUrl}
-                alt={video.title}
+                alt={video.title || video.clientOrProject || 'Design'}
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-contain bg-black"
               />
             ) : (
               <iframe
                 src={getYouTubeEmbedUrl(video.youtubeId || '', true)}
-                title={video.title}
+                title={video.title || video.clientOrProject || 'Video'}
                 className="w-full h-full border-0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
@@ -141,9 +141,11 @@ export const VideoModal: React.FC<VideoModalProps> = ({
               <span className="text-xs font-mono font-bold text-[#0052FF] uppercase tracking-widest block">
                 {video.clientOrProject}
               </span>
-              <h2 className="text-2xl font-sans font-black text-[#111111] mt-1 leading-tight uppercase">
-                {video.title}
-              </h2>
+              {video.title && !isDesign && (
+                <h2 className="text-2xl font-sans font-black text-[#111111] mt-1 leading-tight uppercase">
+                  {video.title}
+                </h2>
+              )}
             </div>
 
             {/* Description */}

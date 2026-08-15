@@ -62,7 +62,7 @@ export const VideoCard: React.FC<VideoCardProps> = ({ video, onSelect }) => {
       >
         <img
           src={thumbnailUrl}
-          alt={video.title}
+          alt={video.title || video.clientOrProject || 'Design'}
           onError={() => setImgError(true)}
           referrerPolicy="no-referrer"
           className="w-full h-full object-contain bg-[#111111] group-hover:scale-105 transition-transform duration-500 opacity-95 group-hover:opacity-100"

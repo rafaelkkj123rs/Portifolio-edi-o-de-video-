@@ -17,7 +17,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     software: ['Adobe Premiere Pro', 'After Effects'],
     description: 'Corte cinematográfico com dinâmica acelerada, pós-produção e sound design imersivo focado em altíssima retenção de audiência.',
     tags: ['Premiere Pro', 'After Effects', 'Sound Design', 'Storytelling'],
-    date: '2026'
+    date: '2024'
   },
   {
     id: '2',
@@ -35,7 +35,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     software: ['Adobe Premiere Pro', 'Photoshop'],
     description: 'Edição contínua com pacing narrativo, efeitos visuais limpos e sincronização musical precisa para retenção máxima.',
     tags: ['Premiere Pro', 'Photoshop', 'Narrativa', 'Pacing'],
-    date: '2026'
+    date: '2024'
   },
   {
     id: '3',
@@ -53,7 +53,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     software: ['After Effects', 'Premiere Pro'],
     description: 'Edição vertical otimizada para algoritmos de alta retenção (YouTube Shorts, Reels, TikTok) com ganchos visuais e legendas animadas.',
     tags: ['After Effects', 'Premiere Pro', 'Shorts', 'Legendas Animadas'],
-    date: '2026'
+    date: '2024'
   },
   {
     id: '4',
@@ -71,7 +71,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     software: ['Premiere Pro', 'After Effects'],
     description: 'Corte rápido e efeitos sonoros acentuados projetados para captura imediata de atenção nos primeiros 3 segundos.',
     tags: ['After Effects', 'Premiere Pro', 'Ganchos', 'Motion'],
-    date: '2026'
+    date: '2024'
   },
   {
     id: 'gif-1',
@@ -89,30 +89,30 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     software: ['After Effects', 'Photoshop'],
     description: 'Animação e Motion Graphics em GIF desenvolvida para SRoxo Kage Store.',
     tags: ['GIF Animado', 'After Effects', 'Photoshop', 'KageStore'],
-    date: '2026'
+    date: '2024'
   },
   {
     id: 'design-1',
-    imageUrl: 'https://media.discordapp.net/attachments/1252592679611797595/1535999143951081513/Desing_90s.png?ex=6a79ce2d&is=6a787cad&hm=d0c777bccd9b068ac05d0f0c1d31f7be8f9c74671b3ba15e86f205822627c5fd&=&format=webp&quality=lossless&width=725&height=1024',
-    title: 'Design 90s',
+    imageUrl: 'https://i.ibb.co/DPHnW3Z6/desing-banner-stock.png',
+    title: '',
     clientOrProject: 'Design Gráfico',
     type: 'design',
     category: 'Designs',
     featured: true,
     duration: 'Design Estático',
     viewsCount: 'Arte Gráfica',
-    aspectRatio: '9:16',
+    aspectRatio: 'banner',
     resolution: 'Alta Resolução',
     fps: 'Estático',
-    software: ['Photoshop'],
-    description: 'Composição de design inspirada na estética e cultura dos anos 90, com tipografia marcante e colagem visual.',
-    tags: ['Design', 'Anos 90', 'Photoshop', 'Arte Gráfica'],
-    date: '2026'
+    software: ['Photoshop', 'Illustrator'],
+    description: 'Composição de banner e arte visual desenvolvida no Photoshop com tipografia e tratamento de cores.',
+    tags: ['Design', 'Banner', 'Photoshop', 'Arte Gráfica'],
+    date: '2024'
   },
   {
     id: 'design-2',
-    imageUrl: 'https://media.discordapp.net/attachments/1252592679611797595/1535999145641513061/desing_retro.png?ex=6a79ce2d&is=6a787cad&hm=ceae06726c71764e0f31b06e0a5908c7628953ffb81b3347b5214252e15fb01a&=&format=webp&quality=lossless&width=725&height=1024',
-    title: 'Design Retrô',
+    imageUrl: 'https://i.ibb.co/pj93Dpsr/desing.png',
+    title: '',
     clientOrProject: 'Design Gráfico',
     type: 'design',
     category: 'Designs',
@@ -122,15 +122,15 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     aspectRatio: '9:16',
     resolution: 'Alta Resolução',
     fps: 'Estático',
-    software: ['Photoshop'],
-    description: 'Design visual retrô elaborado com paleta de cores vintage, texturas analógicas e conceitos de branding.',
-    tags: ['Design', 'Retrô', 'Photoshop', 'Branding'],
-    date: '2026'
+    software: ['Photoshop', 'Illustrator'],
+    description: 'Composição gráfica autoral com texturas personalizadas e layout estilizado.',
+    tags: ['Design', 'Photoshop', 'Composição', 'Arte'],
+    date: '2024'
   },
   {
     id: 'design-3',
-    imageUrl: 'https://media.discordapp.net/attachments/1252592679611797595/1535999147952443453/desing_y2k_pc.png?ex=6a79ce2e&is=6a787cae&hm=8b7dafb29dc3d70224cc7094696d57084910c8b108c7897d54906470fea304db&=&format=webp&quality=lossless&width=725&height=1024',
-    title: 'Design Y2K PC',
+    imageUrl: 'https://i.ibb.co/LhHXsCzf/Desing-90s.png',
+    title: '',
     clientOrProject: 'Design Gráfico',
     type: 'design',
     category: 'Designs',
@@ -140,15 +140,15 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     aspectRatio: '9:16',
     resolution: 'Alta Resolução',
     fps: 'Estático',
-    software: ['Photoshop'],
-    description: 'Criação gráfica em estilo Y2K explorando estética cibernética dos anos 2000, interfaces retro PC e elementos futuristas.',
-    tags: ['Design', 'Y2K', 'Cyber', 'Photoshop'],
-    date: '2026'
+    software: ['Photoshop', 'Illustrator'],
+    description: 'Composição de design inspirada na estética e cultura dos anos 90, com tipografia marcante e colagem visual.',
+    tags: ['Design', 'Anos 90', 'Photoshop', 'Arte Gráfica'],
+    date: '2024'
   },
   {
     id: 'design-4',
-    imageUrl: 'https://media.discordapp.net/attachments/1252592679611797595/1536830231350870079/desing_nokia_y2k.png?ex=6a7d7cf0&is=6a7c2b70&hm=9684ae5e2aec471d4e003580d116750317c3e98580ffc2a1fed63a7ce1b27724&=&format=webp&quality=lossless&width=725&height=1024',
-    title: 'Design Y2K Nokia',
+    imageUrl: 'https://i.ibb.co/MkBswPHY/desing-nokia-y2k.png',
+    title: '',
     clientOrProject: 'Design Gráfico',
     type: 'design',
     category: 'Designs',
@@ -158,15 +158,15 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     aspectRatio: '9:16',
     resolution: 'Alta Resolução',
     fps: 'Estático',
-    software: ['Photoshop'],
-    description: 'Criação gráfica em estilo Y2K explorando estética cibernética dos anos 2000, interfaces retro Nokia e elementos futuristas.',
-    tags: ['Design', 'Y2K', 'Cyber', 'Photoshop'],
-    date: '2026'
+    software: ['Photoshop', 'Illustrator'],
+    description: 'Estética Y2K / Cyber com referências retro tech dos anos 2000 e efeitos cromados.',
+    tags: ['Design', 'Y2K', 'Nokia', 'Photoshop'],
+    date: '2024'
   },
   {
     id: 'design-5',
-    imageUrl: 'https://media.discordapp.net/attachments/1252592679611797595/1536830229589528726/desing_post_car.png?ex=6a7d7cef&is=6a7c2b6f&hm=e927105c1b82aa20d52e8227c26897b8f9587f8c5ecf2ffce4b6064029dcb362&=&format=webp&quality=lossless&width=725&height=1024',
-    title: 'Design Car',
+    imageUrl: 'https://i.ibb.co/GfDt0SrH/desing-retro.png',
+    title: '',
     clientOrProject: 'Design Gráfico',
     type: 'design',
     category: 'Designs',
@@ -176,15 +176,15 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     aspectRatio: '9:16',
     resolution: 'Alta Resolução',
     fps: 'Estático',
-    software: ['Photoshop'],
-    description: 'Criação gráfica.',
-    tags: ['Design', 'discord', 'Cyber', 'Logo', 'Photoshop'],
-    date: '2026'
+    software: ['Photoshop', 'Illustrator'],
+    description: 'Design visual retrô elaborado com paleta de cores vintage, texturas analógicas e conceitos de branding.',
+    tags: ['Design', 'Retrô', 'Photoshop', 'Branding'],
+    date: '2024'
   },
   {
     id: 'design-6',
-    imageUrl: 'https://media.discordapp.net/attachments/1252592679611797595/1536830227706281994/post_astronauta.png?ex=6a7d7cef&is=6a7c2b6f&hm=45fff0f57ccc96f312067659d1b62ef06352a95557242a7d8def227781969edc&=&format=webp&quality=lossless&width=725&height=1024',
-    title: 'Design Capa de filme',
+    imageUrl: 'https://i.ibb.co/99LK4FWY/desing-server.png',
+    title: '',
     clientOrProject: 'Design Gráfico',
     type: 'design',
     category: 'Designs',
@@ -194,15 +194,15 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     aspectRatio: '9:16',
     resolution: 'Alta Resolução',
     fps: 'Estático',
-    software: ['Photoshop'],
-    description: 'Criação gráfica em estilo Capa de filme.',
-    tags: ['Design', 'Capa', 'Cyber', 'Photoshop'],
-    date: '2026'
+    software: ['Photoshop', 'Illustrator'],
+    description: 'Arte promocional para comunidade/servidor com foco em alto impacto visual e contraste.',
+    tags: ['Design', 'Server', 'Photoshop', 'Social'],
+    date: '2024'
   },
   {
     id: 'design-7',
-    imageUrl: 'https://media.discordapp.net/attachments/1252592679611797595/1536830225956999198/Logo_GHOST.png?ex=6a7d7cee&is=6a7c2b6e&hm=6145c856e0fb55ef9038590445f92698ada35972cb3e5035e556b367dc32e04e&=&format=webp&quality=lossless',
-    title: 'Design Logo loja discord',
+    imageUrl: 'https://i.ibb.co/x8zfQPFB/desing-y2k-pc.png',
+    title: '',
     clientOrProject: 'Design Gráfico',
     type: 'design',
     category: 'Designs',
@@ -212,15 +212,15 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     aspectRatio: '9:16',
     resolution: 'Alta Resolução',
     fps: 'Estático',
-    software: ['Photoshop'],
-    description: 'Criação gráfica logo, para lojas no discord.',
+    software: ['Photoshop', 'Illustrator'],
+    description: 'Criação gráfica em estilo Y2K explorando estética cibernética dos anos 2000, interfaces retro PC e elementos futuristas.',
     tags: ['Design', 'Y2K', 'Cyber', 'Photoshop'],
-    date: '2026'
+    date: '2024'
   },
   {
     id: 'design-8',
-    imageUrl: 'https://media.discordapp.net/attachments/1252592679611797595/1536830225105686758/desing_banner_stock.png?ex=6a7d7cee&is=6a7c2b6e&hm=8d64b21fee62fd3c83b82a15ccf66b7494e67ee9b19efd88a987781df9bc5c4a&=&format=webp&quality=lossless&width=1536&height=864',
-    title: 'Design Banner/thumbnail',
+    imageUrl: 'https://i.ibb.co/nNXHPTnb/Logo-GHOST.png',
+    title: '',
     clientOrProject: 'Design Gráfico',
     type: 'design',
     category: 'Designs',
@@ -230,10 +230,46 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     aspectRatio: '9:16',
     resolution: 'Alta Resolução',
     fps: 'Estático',
-    software: ['Photoshop'],
-    description: 'Criação gráfica.',
-    tags: ['Design', 'Thumbnail', 'Photoshop'],
-    date: '2026'
+    software: ['Photoshop', 'Illustrator'],
+    description: 'Identidade visual e logo concept GHOST com estilo minimalista e moderno.',
+    tags: ['Design', 'Logo', 'Ghost', 'Branding'],
+    date: '2024'
+  },
+  {
+    id: 'design-9',
+    imageUrl: 'https://i.ibb.co/r2hCtYWB/post-astronauta.png',
+    title: '',
+    clientOrProject: 'Design Gráfico',
+    type: 'design',
+    category: 'Designs',
+    featured: true,
+    duration: 'Design Estático',
+    viewsCount: 'Arte Gráfica',
+    aspectRatio: '9:16',
+    resolution: 'Alta Resolução',
+    fps: 'Estático',
+    software: ['Photoshop', 'Illustrator'],
+    description: 'Post temático espacial com astronauta, manipulação de iluminação e efeitos atmosféricos.',
+    tags: ['Design', 'Astronauta', 'Manipulação', 'Photoshop'],
+    date: '2024'
+  },
+  {
+    id: 'design-10',
+    imageUrl: 'https://i.ibb.co/LDbd65zM/desing-post-car.png',
+    title: '',
+    clientOrProject: 'Design Gráfico',
+    type: 'design',
+    category: 'Designs',
+    featured: true,
+    duration: 'Design Estático',
+    viewsCount: 'Arte Gráfica',
+    aspectRatio: '9:16',
+    resolution: 'Alta Resolução',
+    fps: 'Estático',
+    software: ['Photoshop', 'Illustrator'],
+    description: 'Post automotivo com tratamento dinâmico, tipografia esportiva e composição de alta energia.',
+    tags: ['Design', 'Automotivo', 'Post', 'Photoshop'],
+    date: '2024'
   },
   {
     id: '5',
@@ -251,7 +287,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     software: ['After Effects', 'Premiere Pro'],
     description: 'Design de áudio em camadas e elementos gráficos customizados para manter o espectador engajado do início ao fim.',
     tags: ['After Effects', 'Premiere Pro', 'Overlays', 'Reels'],
-    date: '2026'
+    date: '2024'
   },
   {
     id: '6',
@@ -269,7 +305,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     software: ['Premiere Pro', 'After Effects'],
     description: 'Sincronização impecável com a trilha sonora, recortes rápidos e animações no After Effects.',
     tags: ['Premiere Pro', 'After Effects', 'Music Sync', 'Speed Ramping'],
-    date: '2026'
+    date: '2024'
   },
   {
     id: '7',
@@ -287,7 +323,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     software: ['After Effects', 'Premiere Pro'],
     description: 'Gráficos na tela, ícones pop-up animados no After Effects e pontuação sonora contínua construindo urgência narrativa.',
     tags: ['After Effects', 'Premiere Pro', 'Pop-ups', 'Kinetic Type'],
-    date: '2026'
+    date: '2024'
   },
   {
     id: '8',
@@ -305,7 +341,7 @@ export const INITIAL_VIDEOS: VideoProject[] = [
     software: ['Premiere Pro', 'After Effects'],
     description: 'Montagem rítmica acelerada no Premiere Pro com animações de texto do After Effects.',
     tags: ['Premiere Pro', 'After Effects', 'Seamless Loop', 'Clean VFX'],
-    date: '2026'
+    date: '2024'
   }
 ];
 

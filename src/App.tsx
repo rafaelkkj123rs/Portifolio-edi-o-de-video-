@@ -13,7 +13,7 @@ import { CONTACT_INFO } from './data/portfolioData';
 
 export default function App() {
   const [videos, setVideos] = useState<VideoProject[]>(() => {
-    const saved = localStorage.getItem('portfolio_videos_v8');
+    const saved = localStorage.getItem('portfolio_videos_v9');
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
@@ -31,7 +31,7 @@ export default function App() {
   });
 
   useEffect(() => {
-    localStorage.setItem('portfolio_videos_v8', JSON.stringify(videos));
+    localStorage.setItem('portfolio_videos_v9', JSON.stringify(videos));
   }, [videos]);
 
   const [selectedVideo, setSelectedVideo] = useState<VideoProject | null>(null);
